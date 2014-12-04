@@ -6,8 +6,8 @@ import json
 import subprocess
 
 BASEDIR = os.path.dirname(os.path.dirname(__file__))
-DOUGHDIR = os.path.join(BASEDIR, 'sugardough')
-DOUGHDIR_TEMP = os.path.join(BASEDIR, 'sugardough-temp')
+DOUGHDIR = os.path.join(BASEDIR, 'project-dir')
+DOUGHDIR_TEMP = os.path.join(BASEDIR, 'project-dir-temp')
 
 
 def global_replace(FROM, TO, dry_run=False):
@@ -34,17 +34,21 @@ def global_replace(FROM, TO, dry_run=False):
         print lines.replace(FROM, TO),
 
 subprocess.call(
-    'git archive --format=tar --prefix=sugardough-temp/ HEAD:sugardough | tar xf -',
+    'git archive --format=tar --prefix={DOUGHDIR_TEMP}/ HEAD:{DOUGHDIR} | tar xf -'.format(
+        DOUGHDIR_TEMP=DOUGHDIR_TEMP,
+        DOUGHDIR=DOUGHDIR
+    ),
     shell=True
 )
 
 with open(os.path.join(BASEDIR, 'cookiecutter.json')) as fp:
     cookiecutter = json.load(fp)
 
+
 for key, value in sorted(cookiecutter.items(), key=lambda x: len(x[1]), reverse=True):
     global_replace(value, '{{ cookiecutter.%s }}' % key)
 
 new_dirname = os.path.basename(DOUGHDIR_TEMP).replace('-temp', '')
-new_dirname = new_dirname.replace('sugardough', '{{ cookiecutter.project_name }}')
+new_dirname = new_dirname.replace('project-dir', '{{ cookiecutter.project_directory }}')
 new_full_path = os.path.join(BASEDIR, new_dirname)
 shutil.move(DOUGHDIR_TEMP, new_full_path)

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# {{ cookiecutter.project_name }} documentation build configuration file, created by
+# {{ cookiecutter.package_name }} documentation build configuration file, created by
 # sphinx-quickstart on Thu Nov  6 19:39:08 2014.
 #
 # This file is execfile()d with the current directory set to its
@@ -50,7 +50,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'{{ cookiecutter.project_name }}'
+project = u'{{ cookiecutter.package_name }}'
 copyright = u'2014, {{ cookiecutter.project_author }}'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -183,7 +183,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = '{{ cookiecutter.project_name }}doc'
+htmlhelp_basename = '{{ cookiecutter.package_name }}doc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -203,7 +203,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', '{{ cookiecutter.project_name }}.tex', u'{{ cookiecutter.project_name }} Documentation',
+  ('index', '{{ cookiecutter.package_name }}.tex', u'{{ cookiecutter.package_name }} Documentation',
    u'{{ cookiecutter.project_author }}', 'manual'),
 ]
 
@@ -233,7 +233,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', '{{ cookiecutter.project_name }}', u'{{ cookiecutter.project_name }} Documentation',
+    ('index', '{{ cookiecutter.package_name }}', u'{{ cookiecutter.package_name }} Documentation',
      [u'{{ cookiecutter.project_author }}'], 1)
 ]
 
@@ -247,8 +247,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', '{{ cookiecutter.project_name }}', u'{{ cookiecutter.project_name }} Documentation',
-   u'{{ cookiecutter.project_author }}', '{{ cookiecutter.project_name }}', 'One line description of project.',
+  ('index', '{{ cookiecutter.package_name }}', u'{{ cookiecutter.package_name }} Documentation',
+   u'{{ cookiecutter.project_author }}', '{{ cookiecutter.package_name }}', 'One line description of project.',
    'Miscellaneous'),
 ]
 

@@ -1,5 +1,5 @@
 """
-Django settings for {{ cookiecutter.project_name }} project.
+Django settings for {{ cookiecutter.package_name }} project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -35,7 +35,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 INSTALLED_APPS = [
     # Project specific apps
-    '{{ cookiecutter.project_name }}.base',
+    '{{ cookiecutter.package_name }}.base',
 
     # Third party apps
     'django_nose',
@@ -64,9 +64,9 @@ MIDDLEWARE_CLASSES = (
     'csp.middleware.CSPMiddleware',
 )
 
-ROOT_URLCONF = '{{ cookiecutter.project_name }}.urls'
+ROOT_URLCONF = '{{ cookiecutter.package_name }}.urls'
 
-WSGI_APPLICATION = '{{ cookiecutter.project_name }}.wsgi.application'
+WSGI_APPLICATION = '{{ cookiecutter.package_name }}.wsgi.application'
 
 
 # Database

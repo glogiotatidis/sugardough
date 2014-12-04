@@ -1,14 +1,14 @@
-{{ cookiecutter.project_name }}
+{{ cookiecutter.package_name }}
 ==========
 
-[![Build Status](https://img.shields.io/travis/mozilla/{{ cookiecutter.project_name }}/master.svg)](https://travis-ci.org/mozilla/{{ cookiecutter.project_name }})
+[![Build Status](https://img.shields.io/travis/mozilla/{{ cookiecutter.package_name }}/master.svg)](https://travis-ci.org/mozilla/{{ cookiecutter.package_name }})
 
-[![Coverage status](https://img.shields.io/coveralls/mozilla/{{ cookiecutter.project_name }}/master.svg)](https://coveralls.io/r/mozilla/{{ cookiecutter.project_name }})
+[![Coverage status](https://img.shields.io/coveralls/mozilla/{{ cookiecutter.package_name }}/master.svg)](https://coveralls.io/r/mozilla/{{ cookiecutter.package_name }})
 
 Run the tests
 -------------
 
-There's a sample test in `{{ cookiecutter.project_name }}/base/tests.py` for your convenience, that
+There's a sample test in `{{ cookiecutter.package_name }}/base/tests.py` for your convenience, that
 you can run using the following command:
 
     python manage.py test
@@ -44,7 +44,7 @@ Docker for deploying to production
 2. Prepare a 'env' file with all the variables needed by dev, stage or production.
 3. Run the image:
 
-    docker run --env-file env -p 80:80 mozilla/{{ cookiecutter.project_name }}
+    docker run --env-file env -p 80:80 mozilla/{{ cookiecutter.package_name }}
 
 
 NewRelic Monitoring

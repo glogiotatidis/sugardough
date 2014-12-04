@@ -1,5 +1,6 @@
 {
-    "project_name": "sugardough",
+    "package_name": "sugardough",
+    "project_directory": "project-dir",
     "project_db": "sugardough_db",
     "project_author": "Chef"
 }
