@@ -1,0 +1,5 @@
+[run]
+source = {{ cookiecutter.package_name }}
+
+[report]
+omit = */migrations/*
