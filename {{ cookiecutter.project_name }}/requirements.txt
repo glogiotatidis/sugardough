@@ -45,8 +45,8 @@ newrelic==2.66.0.49 \
     --hash=sha256:f95b90def0c86b6d4f859664ca411bae90da76345f23ed2de40531d39e2b32a1
 django-session-csrf==0.5 \
     --hash=sha256:44e4639ec057a6b6a9dddb869d4e3a4818fc9278ec490cce39aef08440592a93
-django-jinja==2.1.3 \
-    --hash=sha256:64446ae1de3593136042147cb16ba9a3aa4449370d9c26c1ec9b7553b2d1c809
+django-jinja==2.2.1 \
+    --hash=sha256:04c53ba90cbede97e6543b98291f1eec259e57dfa4e014a5fbf0291afcdae6a9
 flake8==2.6.2 \
     --hash=sha256:7ac3bbaac27174d95bc4734ed23a07de567ffbcf4fc7e316854b4f3015d4fd15 \
     --hash=sha256:231cd86194aaec4bdfaa553ae1a1cd9b7b4558332fbc10136c044940d587a778
