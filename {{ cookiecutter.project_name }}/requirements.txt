@@ -43,8 +43,9 @@ pytz==2016.4 \
     --hash=sha256:be2ff04e94a2b5454ddcfbebb81ee8e46162734d4c2fcc90c422d16ab51f810b
 newrelic==2.66.0.49 \
     --hash=sha256:f95b90def0c86b6d4f859664ca411bae90da76345f23ed2de40531d39e2b32a1
-django-session-csrf==0.5 \
-    --hash=sha256:44e4639ec057a6b6a9dddb869d4e3a4818fc9278ec490cce39aef08440592a93
+django-session-csrf==0.7.1 \
+    --hash=sha256:e17177e6e2e6518ec7ce6693ad10a5c747f8571d09f4cfa9082599334421605d \
+    --hash=sha256:ff8c10e30d312c77fc6a6db7710e22b9383e28c03b7fe958876ca96f39aa6cf2
 django-jinja==2.2.1 \
     --hash=sha256:04c53ba90cbede97e6543b98291f1eec259e57dfa4e014a5fbf0291afcdae6a9
 flake8==2.6.2 \
