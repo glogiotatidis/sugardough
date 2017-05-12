@@ -58,7 +58,6 @@ MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'session_csrf.CsrfMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -110,7 +109,6 @@ TEMPLATES = [
             'match_extension': '.jinja',
             'newstyle_gettext': True,
             'context_processors': [
-                'session_csrf.context_processor',
                 '{{ cookiecutter.project_name }}.base.context_processors.settings',
                 '{{ cookiecutter.project_name }}.base.context_processors.i18n',
             ],
@@ -128,7 +126,6 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
-                'session_csrf.context_processor',
             ],
         }
     },
@@ -168,6 +165,8 @@ CSP_STYLE_SRC = (
     'https://*.mozilla.net',
 )
 CSP_REPORT_ONLY = config('CSP_REPORT_ONLY', default=False)
+
+CSRF_USE_SESSIONS = config('CSRF_USE_SESSIONS', default=True)
 
 # This is needed to get a CRSF token in /admin
 ANON_ALWAYS = True
